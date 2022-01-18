@@ -1,0 +1,30 @@
+body
+{
+
+    background-color: lightgreen;
+}
+
+h2
+{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+img
+{
+    
+    border-bottom-left-radius: 35%;
+}
+
+button {
+    margin-left: 0%;
+border: 2px solid yellow;
+    position: relative;
+    background-color: greenyellow;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
