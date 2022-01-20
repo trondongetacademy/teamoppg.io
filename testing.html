@@ -11,7 +11,7 @@
     <h2>Velg ingredienser</h2>
     <h4>Hva er den perfekte hamburger?</h4>
     <div>
-        <div  onclick="rester(this.innerHTML)"><img src="img/ketchup.jpg" width="100px" height="100px"></div>
+        <div  onclick="rester(this.innerHTML)"><img src="img/ketchup.jpg" width="100px" height="100px"></div> <!-- this.innerHTML refererer til <img src... linken-->
         <div  onclick="rester(this.innerHTML)"><img src="img/salat.jpeg" width="100px" height="100px"></div>
         <div  onclick="rester(this.innerHTML)"><img src="img/suragurk.jpeg" width="100px" height="100px"></div>
         <div  onclick="rester(this.innerHTML)"><img src="img/bbq_saus.jpeg" width="100px" height="100px"></div>
@@ -25,28 +25,25 @@
     <br>
     
     <button onclick="showMat()">Show Ingredients</button>
-    <button onclick="closeMat()">Nullstill</button>
+    <button onclick="closeMat()">Wyzeruj</button>
     <br>
     <div id="output"></div> 
     <script>
-        var verdi = '';
-        let html = document.getElementById('output');
+        var verdi = '';                                // Verdien er satt til null eller tom string. Ingen "verdi".
+        let html = document.getElementById('output');  // variabel html refererer til diven med id="output"
 
-        function rester(type){
-            verdi += type ;
+        function rester(type){                          // (rester) refererer til onclick i divene. (type) refererer til 'this.innerhtml,' som igjenn refererer til img/bildet
+            verdi += type ;                             // verdien er lik (this.innerHTML som refererer til bildet) + eventuelt flere bilder/ verdier.
             console.log(verdi);
             
         }
-        function showMat(){
+        function showMat(){                             // Referer til knappen showMat() som kobler opp html.innerHTML til verdiene lagret i verdi variabelen
             html.innerHTML = verdi;
             
         }
-        function closeMat(){
+        function closeMat(){                            // refererer til knappen closeMat() som gir variabelen verdi en ny verdi, som er en tom string.
             verdi = '';
         }
-
-       
-
     </script>
 </body>
 </html>
